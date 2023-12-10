@@ -3,6 +3,7 @@ const ResponseBody = require("../DTO/response.body");
 const ResponseUser = require("../DTO/response-user");
 const { encriptPassword, comparePass } = require("../utils/encriptPass");
 const JwtBody = require("../DTO/jwt-body");
+const { createToken } = require("../utils/jwt");
 
 const status = (_, res) => {
 
@@ -100,7 +101,7 @@ const login = async (req, res) => {
                 200,
                 "",
                 {
-                    token: new JwtBody(user._id, user.name, user.role, user.email),
+                    token: createToken(new JwtBody(user._id, user.role, user.email)),
                     user: new ResponseUser(
                         user.name,
                         user.surname,
