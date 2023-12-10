@@ -75,6 +75,7 @@ const notFound = require("./router/not-found");
 
     } catch (error) {
         console.log(error);
+        //logger.error(error);
         process.exit(1);
     }
 })();

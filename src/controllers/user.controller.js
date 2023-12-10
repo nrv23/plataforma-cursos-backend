@@ -5,12 +5,7 @@ const { encriptPassword, comparePass } = require("../utils/encriptPass");
 const JwtBody = require("../DTO/jwt-body");
 const { createToken } = require("../utils/jwt");
 
-const status = (_, res) => {
 
-    return res.status(200).json({
-        message: "Alive"
-    });
-}
 const register = async (req, res) => {
 
     try {
@@ -136,6 +131,5 @@ const login = async (req, res) => {
 
 module.exports = {
     register,
-    login,
-    status
+    login
 }
