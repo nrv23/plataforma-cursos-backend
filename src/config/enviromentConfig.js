@@ -21,4 +21,5 @@ module.exports = {
   tokenSecretKey: process.env.TOKEN_SECRET_KEY,
   serverPort: process.env.SERVER_PORT,
   tokenSecretKey: process.env.TOKEN_SECRET_KEY,
+  env: process.env.NODE_ENV
 };

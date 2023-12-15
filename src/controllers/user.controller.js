@@ -4,6 +4,7 @@ const ResponseUser = require("../DTO/response-user");
 const { encriptPassword, comparePass } = require("../utils/encriptPass");
 const JwtBody = require("../DTO/jwt-body");
 const { createToken } = require("../utils/jwt");
+const logger = require("../config/logger");
 
 
 const register = async (req, res) => {
@@ -55,6 +56,7 @@ const register = async (req, res) => {
     } catch (error) {
 
         console.log(error);
+        logger.error('Error en la consulta a la base de datos', { error });
         const response = new ResponseBody(
             500,
             "Hubo un error",
@@ -119,6 +121,7 @@ const login = async (req, res) => {
     } catch (error) {
 
         console.log(error);
+        logger.error('Error en la consulta a la base de datos', { error });
         const response = new ResponseBody(
             500,
             "Hubo un error",
@@ -186,11 +189,14 @@ const login_admin = async (req, res) => {
     } catch (error) {
 
         console.log(error);
+        logger.error("error al registrar un usuario");
         const response = new ResponseBody(
             500,
             "Hubo un error",
             null
         );
+
+
 
         return res.status(500).json(response);
     }

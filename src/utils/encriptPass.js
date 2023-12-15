@@ -1,6 +1,5 @@
 const bcrypt = require("bcrypt");
 
-
 async function encriptPassword(passwordText) {
 
     const saltRounds = 10;

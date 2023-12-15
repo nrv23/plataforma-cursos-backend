@@ -1,3 +1,4 @@
+const { roles } = require("../config/constants");
 const ResponseBody = require("../DTO/response.body");
 
 const isAdmin = (req, res, next) => {
@@ -7,7 +8,7 @@ const isAdmin = (req, res, next) => {
         // preguntar si el role es admin 
         const { currentUser } = req;
 
-        if (currentUser.role === "admin") return next();
+        if (currentUser.role === roles.admin) return next();
 
         else {
 

@@ -13,8 +13,6 @@ const getDecodedToken = async (token) => {
     }
 }
 
-
-
 const auth = (req, res, next) => {
     
     try {

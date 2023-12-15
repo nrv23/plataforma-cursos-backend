@@ -1,0 +1,4 @@
+error: Error en la consulta a la base de datos {"error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
+error: Error en la consulta a la base de datos {"error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
+error: Error en la consulta a la base de datos {"error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
+error: POST /api/v1/users/register 500 - 95.669 ms - message: -
