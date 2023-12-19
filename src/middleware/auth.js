@@ -13,7 +13,7 @@ const getDecodedToken = async (token) => {
     }
 }
 
-const auth = (req, res, next) => {
+const auth = async (req, res, next) => {
     
     try {
 
@@ -26,7 +26,7 @@ const auth = (req, res, next) => {
         }
 
         const token = authHeader.split(' ')[1];
-        const current = getDecodedToken(token);
+        const current = await getDecodedToken(token);
         req.currentUser = current;
         
     } catch (error) { // cae en el catch si el token no es valido

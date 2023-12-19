@@ -56,7 +56,7 @@ const register = async (req, res) => {
     } catch (error) {
 
         console.log(error);
-        logger.error('Error en la consulta a la base de datos', { error });
+        logger.error('register error', { error, date: new Date().toISOString()  });
         const response = new ResponseBody(
             500,
             "Hubo un error",
@@ -121,7 +121,7 @@ const login = async (req, res) => {
     } catch (error) {
 
         console.log(error);
-        logger.error('Error en la consulta a la base de datos', { error });
+        logger.error('login error', { error, date: new Date().toISOString()  });
         const response = new ResponseBody(
             500,
             "Hubo un error",
@@ -189,14 +189,13 @@ const login_admin = async (req, res) => {
     } catch (error) {
 
         console.log(error);
-        logger.error("error al registrar un usuario");
+
+        logger.error("login admin error",{error, date: new Date().toISOString()});
         const response = new ResponseBody(
             500,
             "Hubo un error",
             null
         );
-
-
 
         return res.status(500).json(response);
     }

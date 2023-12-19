@@ -60,7 +60,7 @@ const notFound = require("./router/not-found");
         const exitHandler = () => {
             if (server) {
                 server.close(() => {
-                    logger.info('Server closed');
+                    logger.info('Server closed',{});
                     process.exit(1);
                 });
             } else {
@@ -69,23 +69,23 @@ const notFound = require("./router/not-found");
         };
 
         const unexpectedErrorHandler = (error) => {
-            logger.error(error.message);
+            logger.error("unexpectedErrorHandler",{error});
             exitHandler();
         };
 
-        //process.on('uncaughtException', unexpectedErrorHandler);
-        //process.on('unhandledRejection', unexpectedErrorHandler);
+        process.on('uncaughtException', unexpectedErrorHandler);
+        process.on('unhandledRejection', unexpectedErrorHandler);
 
-        /*process.on('SIGTERM', () => {
-            logger.info('SIGTERM received');
+        process.on('SIGTERM', () => {
+            logger.info('SIGTERM received',{});
             if (server) {
                 server.close();
             }
-        });*/
+        });
 
     } catch (error) {
         console.log(error);
-        logger.error(error);
+        logger.error("trycatch error",{error});
         process.exit(1);
     }
 })();

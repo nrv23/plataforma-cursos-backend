@@ -1,4 +1,5 @@
-error: Error en la consulta a la base de datos {"error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
-error: Error en la consulta a la base de datos {"error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
-error: Error en la consulta a la base de datos {"error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
-error: POST /api/v1/users/register 500 - 95.669 ms - message: -
+error: register error {"date":"2023-12-15T05:39:37.258Z","error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
+error: POST /api/v1/users/register 500 - 96.387 ms - message: -
+error: POST /api/v1/users/login 400 - 81.290 ms - message: -
+error: register error {"date":"2023-12-16T08:33:56.281Z","error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
+error: POST /api/v1/users/register 500 - 87.463 ms - message: -
