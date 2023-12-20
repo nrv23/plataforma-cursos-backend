@@ -6,3 +6,7 @@ info: OPTIONS /api/v1/users/login 204 - 0.875 ms
 info: POST /api/v1/users/login 200 - 70.405 ms
 error: register error {"date":"2023-12-16T08:33:56.281Z","error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
 error: POST /api/v1/users/register 500 - 87.463 ms - message: -
+error: register error {"date":"2023-12-20T02:58:30.750Z","error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
+info: POST /api/v1/users/register 500 - 108.794 ms
+error: register error {"date":"2023-12-20T02:58:31.939Z","error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"navemen23@hotmail.com"}}}
+info: POST /api/v1/users/register 500 - 66.739 ms
