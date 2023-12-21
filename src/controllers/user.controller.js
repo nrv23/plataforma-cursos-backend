@@ -13,17 +13,27 @@ const register = async (req, res) => {
 
         let response = null;
         const {
-            role,
             name,
             surname,
             email,
             password
         } = req.body;
 
+        const exists = await User.findOne({email});
+
+        if(exists) {
+            response = new ResponseBody(
+                400,
+                "El usuario fue registrado anteriormente",
+                null
+            ); 
+            return res.status(+response.code).json(response);
+        }
+
         const hashed = await encriptPassword(password);
 
         const newUser = await User.create({
-            role,
+            role: "cliente",
             name,
             surname,
             email,
